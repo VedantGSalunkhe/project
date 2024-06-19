@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: microservicetwo-service
+spec:
+  ports:
+    - port: 80
+      targetPort: 3000
+      nodePort: 30008
+      protocol: TCP
+  selector:
+    app: python-web
+  type: NodePort
